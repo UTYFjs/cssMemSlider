@@ -98,17 +98,33 @@ label{
     align-self: end;
     box-sizing: border-box;
     padding: 1rem 0.5rem;
+    cursor:pointer;
 
 }
-label:hover{
-    cursor:pointer
+label:hover .circle{
+    background-color: #1a8533;
+    border: 0.1rem solid #1a8533;
+}
+
+label:active .circle{
+    background-color: #dc4a4a;
+    border: 0.1rem solid #dc4a4a;
 }
 .circle {
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
     border: 0.1rem solid black;
+    background-color: black;
+}
+
+
+#slide_1:checked ~ .wrapper .nav_wrap .buttons .label .circle_1,
+#slide_2:checked ~ .wrapper .nav_wrap .buttons .label .circle_2,
+#slide_3:checked ~ .wrapper .nav_wrap .buttons .label .circle_3,
+#slide_4:checked ~ .wrapper .nav_wrap .buttons .label .circle_4 {
+    background-color: #fafafa;
 }
 
 #slide_1:checked ~ .wrapper .images {
