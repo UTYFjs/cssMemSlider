@@ -9,19 +9,20 @@ header{
     text-align: center;
 }
 h1{
-    height: 5vh;
-    font-size: 3rem;
+    height: 4vh;
+    font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0.5rem auto;
+    margin: 0.1rem auto;
 }
 input{
+    height: 0;
     visibility: hidden;
 }
 .wrapper{
     display:flex;
     flex-direction: column;
     height: 100%;
-    width: 35vw;
+    width: 40vw;
     height: 100%;
     overflow: hidden;
     margin: 0 auto;
@@ -30,13 +31,13 @@ input{
 .images{
     display: flex;
     flex-direction: row;
-    width: 140vw;
-    height: 35vw;
+    width: 160vw;
+    height: 40vw;
     overflow: hidden;
 }
 .image{
-    width:35vw;
-    height: 35vw;
+    width:40vw;
+    height: 40vw;
 }
 .image_1{
     background-image: url(./assets/1.jpg);
@@ -67,11 +68,12 @@ input{
 .nav_wrap{
     display:flex;
     flex-direction: row;
-    gap: 1vw;
+    justify-content: space-between;
+
 }
 .text_slide_wrap{
-    width: 35vw;
-    height: 4rem;
+    width: 30vw;
+    height: 3rem;
     overflow: hidden;
 }
 
@@ -79,32 +81,32 @@ input{
     display: flex;
     flex-direction: row;
     gap:0.2rem;
-    width: 140vw;
+    width: 120vw;
     overflow: hidden;
  
 }
 .text{
-    width: 35vw;
+    width: 30vw;
     box-sizing: border-box;
     padding: 0.2rem 0;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .buttons{
     display: flex;
+ justify-content: end;
     align-self: end;
     width: 15vw;
 }
 label{
     display: inline-block;
     width:2rem;
-    height: 4rem;
+    height: 3rem;
     align-self: end;
     box-sizing: border-box;
     padding: 0.5rem 0.5rem;
     cursor:pointer;
-
 }
 label:hover .circle{
     background-color: #1a8533;
@@ -140,17 +142,17 @@ label:active .circle{
 
 }
 #slide_2:checked ~ .wrapper .images {
-    margin-left: -35vw;
+    margin-left: -40vw;
     transition:all 0.7s;
     
 }
 #slide_3:checked ~ .wrapper .images{
-    margin-left: -70vw;
+    margin-left: -80vw;
     transition:all 0.7s;
     
 }
 #slide_4:checked ~ .wrapper .images {
-    margin-left: -105vw;
+    margin-left: -120vw;
     transition:all 0.7s;
     
 }
@@ -161,17 +163,17 @@ label:active .circle{
 
 }
 #slide_2:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
-    margin-left: -35vw;
+    margin-left: -30vw;
     transition:all 0.7s;
 
 }
 #slide_3:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
-    margin-left: -70vw;
+    margin-left: -60vw;
     transition:all 0.7s;
 
 }
 #slide_4:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
-    margin-left: -105vw;
+    margin-left: -90vw;
     transition:all 0.7s;
 
 }
@@ -205,14 +207,12 @@ label:active .circle{
     .text_slide_wrap{
         width: 65vw;
         height: 4rem;
-        overflow: hidden;
     }
     
     .text_wrap{
         flex-direction: row;
         width: 260vw;
-        overflow: hidden;
-     
+    
     }
     .text{
         width: 65vw;
@@ -226,7 +226,7 @@ label:active .circle{
     }
     label{
         width:1.7rem;
-        height: 3.5rem;
+        height: 2.5rem;
     }
      #slide_1:checked ~ .wrapper .images {
         margin-left: 0vw;
@@ -252,73 +252,6 @@ label:active .circle{
     }
     #slide_4:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
         margin-left: -195vw;
-    }
-
-  }
-
-  @media (max-width: 1200px) {
-    h1{
-        height: 4vh;
-        font-size: 2.0rem;
-        margin: 0.3rem auto;
-    }
-
-    .wrapper{
-        width: 45vw;
-        overflow: hidden;
-    }
-    .images{
-        display: flex;
-        flex-direction: row;
-        width: 180vw;
-        height: 45vw;
-        
-    }
-    .image{
-        width:45vw;
-        height: 45vw;
-    }
-
-    .text_slide_wrap{
-        width: 45vw;
-        height: 4rem;
-        overflow: hidden;
-    }
-    
-    .text_wrap{
-        display: flex;
-        flex-direction: row;
-        width: 180vw;
-        overflow: hidden;     
-    }
-    .text{
-        width: 45vw;
-    }
-    
-    #slide_1:checked ~ .wrapper .images {
-        margin-left: 0vw;
-    }
-    #slide_2:checked ~ .wrapper .images {
-        margin-left: -45vw;
-    }
-    #slide_3:checked ~ .wrapper .images{
-        margin-left: -90vw;
-    }
-    #slide_4:checked ~ .wrapper .images {
-        margin-left: -135vw;
-    }
-    
-    #slide_1:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
-        margin-left: 0vw;
-    }
-    #slide_2:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
-        margin-left: -45vw;
-    }
-    #slide_3:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
-        margin-left: -90vw;
-    }
-    #slide_4:checked ~ .wrapper .nav_wrap .text_slide_wrap .text_wrap {
-        margin-left: -135vw;
     }
 
   }
